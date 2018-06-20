@@ -17,22 +17,28 @@ module.exports = function(webpackConf, props) {
     }
     props = Object.assign({}, defaultProps, props);
 
-    webpackConf.plugins.push(new webpack.ProvidePlugin({
-        'enzyme': require.resolve('enzyme'),
-        'expect': require.resolve('expect')
-    }));
     let query = `${props.root}/**/*.${props.postfix}.${props.ext}`;
 
     let preprocessors = {};
     preprocessors[query] = ['webpack'];
 
-    webpackConf.externals = {
+    webpackConf.plugins.push(new webpack.ProvidePlugin({
+        'enzyme': require.resolve('enzyme'),
+        'expect': require.resolve('expect')
+    }));
+
+    webpackConf.externals = Object.assign({}, webpackConf.externals, {
         'jsdom': 'window',
         'cheerio': 'window',
         'react/addons': true,
         'react/lib/ReactContext': true,
         'react/lib/ExecutionEnvironment': true
-    };
+    });
+
+    webpackConf.node = Object.assign({}, webpackConf.node, {
+        fs: 'empty',
+        child_process: 'empty',
+    });
 
     let finalConfig = {
         urlRoot:  props.root,
