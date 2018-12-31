@@ -1,0 +1,19 @@
+{
+  "name": "simple",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(js|jsx|ts)$": "<rootDir>/node_modules/rocket-tester/babelJest.js"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rocket-tester": "https://github.com/AlexSergey/rocket-tester.git"
+  }
+}

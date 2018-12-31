@@ -1,0 +1,25 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(js|jsx|ts)$": "<rootDir>/node_modules/rocket-tester/babelJest.js"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react-dom": "^16.7.0",
+    "react": "^16.7.0"
+  },
+  "devDependencies": {
+    "rocket-tester": "https://github.com/AlexSergey/rocket-tester.git"
+  }
+}
