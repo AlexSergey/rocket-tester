@@ -1,6 +1,6 @@
 {
-  "name": "jest-test",
-  "version": "1.0.0",
+  "name": "rocket-tester",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "author": "",
@@ -14,6 +14,6 @@
     "enzyme-adapter-react-16": "1.7.1",
     "@babel/plugin-transform-modules-commonjs": "7.2.0",
     "babel-jest": "23.6.0",
-    "rocket-starter": "git+https://github.com/AlexSergey/rocket-starter.git"
+    "rocket-starter": "1.1.1"
   }
 }
