@@ -9,6 +9,9 @@
   "jest": {
     "transform": {
       "^.+\\.(js|jsx|ts)$": "<rootDir>/node_modules/rocket-tester/babelJest.js"
+    },
+    "moduleNameMapper": {
+      "\\.(css|less|scss|sss|styl)$": "../../identityObjProxy.js"
     }
   },
   "keywords": [],
@@ -20,6 +23,6 @@
     "react": "^16.7.0"
   },
   "devDependencies": {
-    "rocket-tester": "https://github.com/AlexSergey/rocket-tester.git"
+    "rocket-tester": "1.0.3"
   }
 }
