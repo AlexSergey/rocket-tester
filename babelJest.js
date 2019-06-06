@@ -20,6 +20,10 @@ const opts = {
     ]
 };
 
+if (!opts.env) {
+    opts.env = {};
+}
+
 if (!opts.env.test) {
     opts.env.test = {};
 }

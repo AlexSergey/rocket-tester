@@ -4182,10 +4182,10 @@ rimraf@^2.5.4, rimraf@^2.6.1:
   dependencies:
     glob "^7.1.3"
 
-rocket-tester@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/rocket-tester/-/rocket-tester-1.0.3.tgz#a26791411d377b2613f973854f7a349d11f67ffb"
-  integrity sha512-PL/J4O2Zhz5QAyV0oDtXCzBcDFzxnhYJYmVdlM+eOcufYCQfYwVImkUSnEyXXPm+Iw97TtVke/E0ETGI9zYMJA==
+rocket-tester@1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/rocket-tester/-/rocket-tester-1.0.4.tgz#4daa267f1d6a5a70a1cf11a683f1d449915468fa"
+  integrity sha512-Cbglnii+6JDa0UAVOVgaJdXY9cbgg4edHL9EzCb/XKSlNaWCKWgkCnN5wuCSFNOWA8TVQlLrUFH4uynGwknyow==
   dependencies:
     "@babel/plugin-proposal-class-properties" "7.4.4"
     "@babel/plugin-proposal-decorators" "7.4.4"
