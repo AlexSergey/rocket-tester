@@ -8,10 +8,11 @@
   },
   "jest": {
     "transform": {
-      "^.+\\.(js|jsx|ts)$": "<rootDir>/node_modules/rocket-tester/babelJest.js"
+      "^.+\\.(js|jsx|ts)$": "<rootDir>/node_modules/rocket-tester/babelJest.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/node_modules/rocket-tester/fileTransformer.js"
     },
     "moduleNameMapper": {
-      "\\.(css|less|scss|sss|styl)$": "../../identityObjProxy.js"
+      "\\.(css|less|scss|sss|styl)$": "<rootDir>/node_modules/rocket-tester/identityObjProxy.js"
     }
   },
   "keywords": [],
@@ -23,6 +24,6 @@
     "react": "^16.7.0"
   },
   "devDependencies": {
-    "rocket-tester": "1.0.6"
+    "rocket-tester": "1.0.7"
   }
 }
