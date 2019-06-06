@@ -23,6 +23,6 @@
     "react": "^16.7.0"
   },
   "devDependencies": {
-    "rocket-tester": "1.0.3"
+    "rocket-tester": "1.0.4"
   }
 }
