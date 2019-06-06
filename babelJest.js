@@ -1,6 +1,34 @@
 const babelJest = require('babel-jest');
-const { babelOpts } = require('rocket-starter');
-let opts = babelOpts();
+
+const opts = {
+    cacheDirectory: true,
+    babelrc: false,
+    presets: [
+        [require.resolve('@babel/preset-env'), Object.assign({
+            useBuiltIns: 'entry',
+            modules: false,
+            loose: true
+        })],
+        require.resolve('@babel/preset-react')
+    ],
+    plugins: [
+        require.resolve('@babel/plugin-syntax-dynamic-import'),
+        require.resolve('@babel/plugin-transform-flow-comments'),
+        [require.resolve('@babel/plugin-proposal-decorators'), { "legacy": true }],
+        require.resolve('@babel/plugin-proposal-class-properties'),
+        require.resolve('@babel/plugin-proposal-object-rest-spread')
+    ],
+    env: {
+        production: {
+            plugins: [
+                require.resolve('@babel/plugin-transform-react-constant-elements'),
+                require.resolve('@babel/plugin-transform-react-inline-elements'),
+                require.resolve('babel-plugin-transform-react-pure-class-to-function'),
+                require.resolve('babel-plugin-transform-react-remove-prop-types')
+            ]
+        }
+    }
+};
 
 if (!opts.env.test) {
     opts.env.test = {};
