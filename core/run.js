@@ -11,14 +11,13 @@ function run(opts = {}) {
     const src = path.join(projectFolder, options.src);
 
     let argv = `--testMatch="${src}/**/*.${options.prefix}.{js,jsx,ts,tsx}"`;
-    argv += ` --rootDir="${rootFolder}"`;
-    argv += ` --testPathIgnorePatterns='(dist|build|docs|node_modules)'`;
+    argv += ` --rootDir="${projectFolder}"`;
 
     if (isString(options.configPath)) {
         argv += ` --config="${options.configPath}"`;
     }
     else {
-        argv += ` --config="${rootFolder}/config.json"`;
+        argv += ` --config="${rootFolder}/config.js"`;
     }
 
     jest.run(argv);
