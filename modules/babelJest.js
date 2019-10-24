@@ -1,12 +1,10 @@
 const babelJest = require('babel-jest');
 
 const opts = {
-    cacheDirectory: true,
     babelrc: false,
     presets: [
         [require.resolve('@babel/preset-env'), Object.assign({
-            useBuiltIns: 'entry',
-            modules: false,
+            modules: "commonjs",
             loose: true
         })],
         require.resolve('@babel/preset-react')

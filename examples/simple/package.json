@@ -6,11 +6,6 @@
   "scripts": {
     "test": "jest"
   },
-  "jest": {
-    "transform": {
-      "^.+\\.(js|jsx|ts)$": "<rootDir>/node_modules/rocket-tester/babelJest.js"
-    }
-  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
