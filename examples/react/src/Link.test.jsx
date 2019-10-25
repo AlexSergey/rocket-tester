@@ -1,6 +1,5 @@
 import React from 'react';
-import { helpers } from '../../../';
-const { enzyme, enzymeToJson } = helpers;
+import { enzyme, enzymeToJson } from '../../../helpers';
 const { shallow } = enzyme;
 const { shallowToJson } = enzymeToJson;
 

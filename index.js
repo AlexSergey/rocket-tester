@@ -1,14 +1,4 @@
 const run = require('./core/run');
-const enzyme = require('enzyme');
-const enzymeToJson = require('enzyme-to-json');
-const Adapter = require('enzyme-adapter-react-16');
+const watch = require('./core/watch');
 
-enzyme.configure({ adapter: new Adapter() });
-
-module.exports = {
-    run,
-    helpers: {
-        enzyme,
-        enzymeToJson
-    }
-};
+module.exports = { run, watch };

@@ -1,25 +1,9 @@
 const jest = require('jest');
-const path = require('path');
-const defaultProps = require('../defaultProps');
-const deepExtend = require('deep-extend');
-const { isString } = require('valid-types');
+const argsCompiler = require('./argsCompiler');
 
 function run(opts = {}) {
-    const options = deepExtend({}, defaultProps, opts);
-    const rootFolder = path.resolve(__dirname, '..');
-    const projectFolder = path.dirname(require.main.filename);
-    const src = path.join(projectFolder, options.src);
-
-    let argv = `--testMatch="${src}/**/*.${options.prefix}.{js,jsx,ts,tsx}"`;
-    argv += ` --rootDir="${projectFolder}"`;
-
-    if (isString(options.configPath)) {
-        argv += ` --config="${options.configPath}"`;
-    }
-    else {
-        argv += ` --config="${rootFolder}/config.js"`;
-    }
-
+    let argv = argsCompiler(opts, 'run');
+    console.log(argv);
     jest.run(argv);
 }
 

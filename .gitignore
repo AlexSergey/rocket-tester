@@ -13,3 +13,5 @@ Thumbs.db
 logs
 reports
 dist
+coverage
+test-reports
