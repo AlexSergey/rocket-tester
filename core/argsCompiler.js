@@ -21,10 +21,10 @@ module.exports = function argsCompilers(opts = {}, mode) {
     else {
         switch (mode) {
             case 'run':
-                argv += ` --config="${rootFolder}/config.run.js"`;
+                argv += ` --config="${rootFolder}/configs/config.run.js"`;
                 break;
             case 'watch':
-                argv += ` --config="${rootFolder}/config.watch.js"`;
+                argv += ` --config="${rootFolder}/configs/config.watch.js"`;
                 break;
         }
     }

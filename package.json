@@ -1,6 +1,6 @@
 {
   "name": "rocket-tester",
-  "version": "1.6.1",
+  "version": "1.7.0",
   "description": "",
   "main": "index.js",
   "author": "",
@@ -26,6 +26,9 @@
     "enzyme-adapter-react-16": "1.15.1",
     "enzyme-to-json": "3.4.3",
     "identity-obj-proxy": "3.0.0",
+    "ts-jest": "24.1.0",
+    "typescript": "3.6.4",
+    "@types/jest": "24.0.20",
     "jest": "24.9.0",
     "valid-types": "1.0.2",
     "regenerator-runtime": "0.13.3",
