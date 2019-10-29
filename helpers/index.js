@@ -9,4 +9,4 @@ enzyme.configure({
 module.exports = {
     enzyme,
     enzymeToJson
-}
+};

@@ -37,7 +37,8 @@ module.exports = {
         require.resolve('jest-extended'),
         require.resolve('expect-more-jest'),
         require.resolve('jest-generator'),
-        require.resolve('jest-chain')
+        require.resolve('jest-chain'),
+        require.resolve('@testing-library/jest-dom/extend-expect')
     ],
     collectCoverage: true,
     coverageReporters: ["json", "html"],
