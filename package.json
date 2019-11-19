@@ -1,6 +1,6 @@
 {
   "name": "rocket-tester",
-  "version": "1.8.2",
+  "version": "1.8.5",
   "description": "",
   "main": "index.js",
   "author": "",
@@ -15,6 +15,7 @@
     "@babel/plugin-transform-modules-commonjs": "7.6.0",
     "@babel/plugin-transform-react-constant-elements": "7.6.3",
     "@babel/plugin-transform-react-inline-elements": "7.2.0",
+    "@babel/polyfill": "7.7.0",
     "@babel/preset-env": "7.6.3",
     "@babel/preset-react": "7.6.3",
     "@testing-library/jest-dom": "4.2.0",
@@ -34,12 +35,8 @@
     "jest-html-reporters": "1.2.0",
     "react": "16.11.0",
     "react-dom": "16.11.0",
-    "regenerator-runtime": "0.13.3",
     "ts-jest": "24.1.0",
     "typescript": "3.6.4",
-    "valid-types": "1.0.2",
-    "isomorphic-fetch": "2.2.1",
-    "@testing-library/react": "9.3.2",
-    "@babel/polyfill": "7.7.0"
+    "valid-types": "1.0.2"
   }
 }

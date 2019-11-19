@@ -1,4 +1,3 @@
-require('@babel/polyfill');
 const { existsSync } = require('fs');
 const path = require('path');
 
@@ -15,6 +14,16 @@ if (existsSync(path.resolve(currentProjectFolder, './tsconfig.js'))) {
 if (existsSync(path.resolve(currentProjectFolder, './tsconfig.json'))) {
     tsConfig = path.resolve(currentProjectFolder, './tsconfig.json');
 }
+
+let setupFiles = [
+    `${rootFolder}/configs/enzyme.config.js`,
+    `${rootFolder}/configs/jest.config.js`
+];
+
+if (existsSync(path.resolve(currentProjectFolder, './jest.config.js'))) {
+    setupFiles.push('<rootDir>/jest.config.js')
+}
+
 
 module.exports = {
     transform: {
@@ -34,6 +43,7 @@ module.exports = {
     testPathIgnorePatterns: [
         "<rootDir>/(build|dist|temp|docs|documentation|node_modules)/"
     ],
+    setupFiles,
     setupFilesAfterEnv: [
         require.resolve('jest-extended'),
         require.resolve('expect-more-jest'),
