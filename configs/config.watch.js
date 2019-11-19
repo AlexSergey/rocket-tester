@@ -1,3 +1,4 @@
+require('babel-polyfill');
 const { existsSync } = require('fs');
 const path = require('path');
 
@@ -42,6 +43,7 @@ module.exports = {
     ],
     globals: {
         'ts-jest': {
+            diagnostics: false,
             tsConfig
         }
     }

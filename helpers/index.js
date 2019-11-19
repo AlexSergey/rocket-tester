@@ -1,6 +1,8 @@
 const enzyme = require('enzyme');
 const enzymeToJson = require('enzyme-to-json');
 const Adapter = require('enzyme-adapter-react-16');
+const createGQLFetch = require('./graphQlFetcher');
+const reactTestingLibrary = require('@testing-library/react');
 
 enzyme.configure({
     adapter: new Adapter()
@@ -8,5 +10,7 @@ enzyme.configure({
 
 module.exports = {
     enzyme,
-    enzymeToJson
+    enzymeToJson,
+    createGQLFetch,
+    reactTestingLibrary
 };
