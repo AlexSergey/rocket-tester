@@ -1,4 +1,4 @@
-import fetch from 'isomorphic-fetch';
+const fetch = require('isomorphic-fetch');
 
 const createGQLFetch = url => async query => {
     try {

@@ -1,4 +1,4 @@
-require('babel-polyfill');
+require('@babel/polyfill');
 const { existsSync } = require('fs');
 const path = require('path');
 
