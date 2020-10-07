@@ -1,3 +1,4 @@
+# This module has been deprecated. Please use [Rockpack](https://github.com/AlexSergey/rockpack)
 
 ### Expect addons:
 - [jest-extended](https://github.com/jest-community/jest-extended)
